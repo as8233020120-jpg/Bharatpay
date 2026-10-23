@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Pay - भारत का सबसे भरोसेमंद नेटवर्क</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Supabase JS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Branding Header -->
+    <div class="brand-header">
+      <div class="logo-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h1 class="brand-title">INDIA PAY</h1>
+      <p class="brand-tagline">भारत का सबसे भरोसेमंद नेटवर्क</p>
+      <div class="brand-features">
+        <span><i class="fa-solid fa-bolt feature-icon"></i> FAST</span> • 
+        <span><i class="fa-solid fa-lock feature-icon"></i> SECURE</span> • 
+        <span><i class="fa-solid fa-wand-magic-sparkles feature-icon"></i> SIMPLE</span>
+      </div>
+    </div>
+
+    <!-- Auth Box -->
+    <div class="auth-box">
+      <!-- Tab Switcher -->
+      <div class="tab-buttons">
+        <button id="loginTabBtn" class="tab-btn active" onclick="switchTab('login')">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+        <button id="signupTabBtn" class="tab-btn" onclick="switchTab('signup')">
+          <i class="fa-solid fa-user-plus"></i> Sign Up
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form active-form" onsubmit="handleLogin(event)">
+        <div class="input-group">
+          <label><i class="fa-solid fa-envelope"></i> Registered Email ID</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-key"></i> Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="submit-btn">Login Now <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="auth-form" onsubmit="handleSignup(event)">
+        <div class="input-group">
+          <label><i class="fa-solid fa-user"></i> Full Name</label>
+          <input type="text" id="signupName" placeholder="Enter full name" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-phone"></i> Mobile Number</label>
+          <input type="tel" id="signupPhone" placeholder="Enter 10-digit mobile number" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+          <input type="email" id="signupEmail" placeholder="Enter valid email" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-lock"></i> New Password</label>
+          <input type="password" id="signupPassword" placeholder="Create password (min 6 chars)" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-check-double"></i> Confirm Password</label>
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm password" required>
+        </div>
+        <button type="submit" class="submit-btn">Create Account <i class="fa-solid fa-user-check"></i></button>
+      </form>
+
+      <p id="authMessage" class="message"></p>
+    </div>
+
+    <!-- Support Section -->
+    <div class="support-card">
+      <h3><i class="fa-solid fa-headset"></i> 24/7 Customer Support</h3>
+      <p>Kisi bhi samasya ke liye hamare support channels par sampark karein:</p>
+      <div class="support-buttons">
+        <a href="https://t.me/your_telegram_handle" target="_blank" class="social-btn telegram">
+          <i class="fa-brands fa-telegram"></i> Telegram Support
+        </a>
+        <a href="https://wa.me/910000000000" target="_blank" class="social-btn whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Support
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer & Disclaimer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a> • 
+        <a href="#">Terms & Conditions</a> • 
+        <a href="#">Security</a>
+      </div>
+      <div class="disclaimer-box">
+        <p><strong>Disclaimer:</strong> India Pay ek surakshit digital platform hai. Kripya apna OTP aur Password kisi ke saath bhi share na karein. Bharat ka sabse bharosemand network.</p>
+      </div>
+      <p class="copyright">© 2026 India Pay Inc. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
